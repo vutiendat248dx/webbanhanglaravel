@@ -12,7 +12,7 @@ class WebController extends Controller
 {
     public function index()
     {
-
+        // dd(Session::get('member'));
         $data = new Product();
         $pro['list'] = $data->viewProbyCate();
         return view('Member.homepage', $pro);

@@ -14,6 +14,7 @@ class MemberLoginController extends Controller
 {
     public function index()
     {
+        Session::forget('member');
         return view('Member\loginmember');
     }
 
