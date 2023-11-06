@@ -5,8 +5,9 @@ namespace App\Models\Members;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Member extends Model
+class Member extends Authenticatable
 {
     use HasFactory;
     protected $table = 'tb_member';
@@ -17,9 +18,16 @@ class Member extends Model
         'email',
         'password',
     ];
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
 
     public function findAll()
     {
         return DB::table('tb_member')->get();
+    }
+    public function findMembyEmail($e)
+    {
+        return DB::table('tb_member')->where('email', '=', $e)->first();
     }
 }

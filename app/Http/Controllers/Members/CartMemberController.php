@@ -13,7 +13,6 @@ class CartMemberController extends Controller
     public function showCart()
     {
         $value = Session::get('member');
-        // $sessionCart = Session::get('cart');
         // dd($value);
         if (isset($value)) {
             if (Session::get('cart') != null) {
