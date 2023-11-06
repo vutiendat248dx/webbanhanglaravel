@@ -45,7 +45,7 @@ class Product extends Model
         return DB::table('tb_product_admin')
             ->join('tb_category_admin', 'tb_product_admin.cate_id', '=', 'tb_category_admin.id')
             ->select('tb_product_admin.*', 'tb_category_admin.category_name')
-            // ->groupBy('tb_category_admin.category_name')
+            ->groupBy('tb_category_admin.category_name')
             ->orderBy('tb_product_admin.cate_id', 'asc')
             ->limit(4)
             ->get();
