@@ -31,7 +31,7 @@ class MemberRegisterController extends Controller
         $data->password = Hash::make($request->password);
         $data->phonenumber = $request->phonenumber;
         $data->save();
-        // Session::put('member', $data);
+        Session::put('member', $data);
         return redirect()->route('loginmember');
     }
 }
