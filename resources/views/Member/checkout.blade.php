@@ -21,26 +21,26 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="fullname">Họ tên</label>
-                                <input type="text" class="form-control" value="{{$list->fullname}}">
+                                <input type="text" class="form-control" value="{{$listmember->fullname}}">
                             </div>
                         </div>
                         <div class="w-100"></div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="address">Địa chỉ</label>
-                                <input type="text" name="address" value="{{$list->address}}" class="form-control">
+                                <input type="text" name="address" value="{{$listmember->address}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="phone">Số điện thoại</label>
-                                <input type="text" class="form-control" value="{{$list->phonenumber}}">
+                                <input type="text" class="form-control" value="{{$listmember->phonenumber}}">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="text" class="form-control" value="{{$list->email}}">
+                                <input type="text" class="form-control" value="{{$listmember->email}}">
                             </div>
                         </div>
                     </div>
