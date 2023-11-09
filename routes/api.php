@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\CartController;
+use App\Http\Controllers\Api\MemberController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->get('/member', function (Request $request) {
+    return $request->member();
 });
+Route::post('/login', [MemberController::class, 'login']);
+Route::post('/register', [MemberController::class, 'register']);
+
+
+Route::post('/cartmember', [CartController::class, 'saveCart']);

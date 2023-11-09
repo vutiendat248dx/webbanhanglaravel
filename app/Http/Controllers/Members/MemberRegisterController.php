@@ -24,7 +24,6 @@ class MemberRegisterController extends Controller
             'phonenumber' => 'required',
         ]);
         $data = new Member();
-
         $data->fullname = $request->fullname;
         $data->address = $request->address;
         $data->email = $request->email;
